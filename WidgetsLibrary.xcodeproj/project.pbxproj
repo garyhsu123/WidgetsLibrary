@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5485B00326624696006D3940 /* WidgetsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 5485B00126624696006D3940 /* WidgetsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5485B00A266247E9006D3940 /* FDRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485B009266247E9006D3940 /* FDRoundButton.swift */; };
+		54F3E12526638163008E107E /* FDLogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3E12326638163008E107E /* FDLogCollectionViewCell.swift */; };
+		54F3E12626638163008E107E /* FDLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3E12426638163008E107E /* FDLogView.swift */; };
+		54F3E12A266381C1008E107E /* FDLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54F3E128266381C1008E107E /* FDLogView.xib */; };
+		54F3E12B266381C1008E107E /* FDLogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54F3E129266381C1008E107E /* FDLogCollectionViewCell.xib */; };
+		54F3E132266382D9008E107E /* FDLogUnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3E131266382D9008E107E /* FDLogUnitModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +21,11 @@
 		5485B00126624696006D3940 /* WidgetsLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetsLibrary.h; sourceTree = "<group>"; };
 		5485B00226624696006D3940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5485B009266247E9006D3940 /* FDRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDRoundButton.swift; sourceTree = "<group>"; };
+		54F3E12326638163008E107E /* FDLogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDLogCollectionViewCell.swift; sourceTree = "<group>"; };
+		54F3E12426638163008E107E /* FDLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDLogView.swift; sourceTree = "<group>"; };
+		54F3E128266381C1008E107E /* FDLogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDLogView.xib; sourceTree = "<group>"; };
+		54F3E129266381C1008E107E /* FDLogCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDLogCollectionViewCell.xib; sourceTree = "<group>"; };
+		54F3E131266382D9008E107E /* FDLogUnitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDLogUnitModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,10 +59,32 @@
 			isa = PBXGroup;
 			children = (
 				5485B00126624696006D3940 /* WidgetsLibrary.h */,
+				54F3E13026638264008E107E /* Model */,
+				54F3E127266381C1008E107E /* Nib */,
 				5485B00226624696006D3940 /* Info.plist */,
+				54F3E12326638163008E107E /* FDLogCollectionViewCell.swift */,
+				54F3E12426638163008E107E /* FDLogView.swift */,
 				5485B009266247E9006D3940 /* FDRoundButton.swift */,
 			);
 			path = WidgetsLibrary;
+			sourceTree = "<group>";
+		};
+		54F3E127266381C1008E107E /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				54F3E128266381C1008E107E /* FDLogView.xib */,
+				54F3E129266381C1008E107E /* FDLogCollectionViewCell.xib */,
+			);
+			name = Nib;
+			path = FDWidgetsBundle/Nib;
+			sourceTree = SOURCE_ROOT;
+		};
+		54F3E13026638264008E107E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54F3E131266382D9008E107E /* FDLogUnitModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +156,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F3E12A266381C1008E107E /* FDLogView.xib in Resources */,
+				54F3E12B266381C1008E107E /* FDLogCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F3E132266382D9008E107E /* FDLogUnitModel.swift in Sources */,
 				5485B00A266247E9006D3940 /* FDRoundButton.swift in Sources */,
+				54F3E12526638163008E107E /* FDLogCollectionViewCell.swift in Sources */,
+				54F3E12626638163008E107E /* FDLogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +317,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = FUNDEV.WidgetsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -306,6 +344,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = FUNDEV.WidgetsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
